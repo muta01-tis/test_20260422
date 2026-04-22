@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | LAKOTA HOUSE</title>
+  <meta name="description" content="LAKOTA HOUSEへのご宿泊予約・お問い合わせはこちらのフォームからどうぞ。施設に関するご質問もお気軽にお問い合わせください。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==============================
+       Header
+  ============================== -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="site-logo">LAKOTA HOUSE</a>
+      <nav class="global-nav" role="navigation" aria-label="グローバルナビゲーション">
+        <ul class="global-nav__list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="access.html">Access</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn-reserve">予約・お問い合わせ</a>
+      </nav>
+      <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" role="navigation" aria-label="モバイルナビゲーション">
+    <ul class="mobile-nav__list">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="access.html">Access</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn-reserve">予約・お問い合わせ</a>
+  </nav>
+
+  <main>
+
+    <!-- ==============================
+         Page Header
+    ============================== -->
+    <section class="page-header" aria-label="ページヘッダー">
+      <div class="page-header__bg" style="background-image: url('https://placehold.co/1920x600/2C2C2C/ffffff?text=CONTACT');"></div>
+      <div class="page-header__content">
+        <p class="page-header__label">Contact</p>
+        <h1 class="page-header__title">CONTACT</h1>
+      </div>
+    </section>
+
+    <!-- ==============================
+         Contact Form Section
+    ============================== -->
+    <section class="contact-page" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <div class="contact-intro fade-in">
+          <p class="section-subtitle">Get in Touch</p>
+          <h2 class="section-title" id="contact-heading">お問い合わせ</h2>
+          <p class="contact-intro__body">
+            ご宿泊のご予約・施設に関するお問い合わせは、下記フォームよりご連絡ください。<br>
+            通常2〜3営業日以内にご返信いたします。
+          </p>
+        </div>
+
+        <div class="contact-form-wrap">
+
+          <!-- Contact Form -->
+          <form id="contactForm" class="fade-in" novalidate>
+
+            <!-- Name -->
+            <div class="form-group">
+              <label class="form-label" for="name">
+                お名前 <span class="required">必須</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                placeholder="山田 太郎"
+                required
+                autocomplete="name"
+              >
+              <p class="form-error" id="name-error" role="alert" aria-live="polite"></p>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label class="form-label" for="email">
+                メールアドレス <span class="required">必須</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="example@email.com"
+                required
+                autocomplete="email"
+              >
+              <p class="form-error" id="email-error" role="alert" aria-live="polite"></p>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+              <label class="form-label" for="phone">
+                電話番号 <span style="font-size:11px; color:var(--color-subtext); margin-left:6px;">任意</span>
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="form-control"
+                placeholder="03-1234-5678"
+                autocomplete="tel"
+              >
+            </div>
+
+            <!-- Inquiry Type -->
+            <div class="form-group">
+              <label class="form-label" for="inquiry-type">
+                お問い合わせ種別 <span class="required">必須</span>
+              </label>
+              <select
+                id="inquiry-type"
+                name="inquiry-type"
+                class="form-control"
+                required
+              >
+                <option value="" disabled selected>選択してください</option>
+                <option value="stay">ご宿泊について</option>
+                <option value="facility">施設について</option>
+                <option value="media">取材・メディア</option>
+                <option value="other">その他</option>
+              </select>
+              <p class="form-error" id="inquiry-type-error" role="alert" aria-live="polite"></p>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label class="form-label" for="message">
+                お問い合わせ内容 <span class="required">必須</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-control"
+                rows="6"
+                placeholder="お問い合わせ内容をご記入ください。"
+                required
+              ></textarea>
+              <p class="form-error" id="message-error" role="alert" aria-live="polite"></p>
+            </div>
+
+            <!-- Privacy Policy Checkbox -->
+            <div class="form-group">
+              <label class="form-checkbox">
+                <input type="checkbox" id="privacy" name="privacy" required>
+                <span>
+                  <a href="#" target="_blank" rel="noopener">プライバシーポリシー</a>に同意します。<span class="required" style="margin-left:4px;">必須</span>
+                </span>
+              </label>
+              <p class="form-error" id="privacy-error" role="alert" aria-live="polite"></p>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-submit">
+              <button type="submit" class="btn btn--primary">送信する</button>
+            </div>
+
+          </form>
+
+          <!-- Thanks Message (shown after submit) -->
+          <div class="thanks-message" role="status" aria-live="polite">
+            <div class="thanks-message__icon" aria-hidden="true">
+              <i class="fa-regular fa-circle-check"></i>
+            </div>
+            <h2 class="thanks-message__title">お問い合わせありがとうございました。</h2>
+            <p class="thanks-message__body">
+              お問い合わせを受け付けいたしました。<br>
+              通常2〜3営業日以内にご返信いたします。<br>
+              しばらくお待ちくださいませ。
+            </p>
+            <a href="index.html" class="btn btn--outline-dark">トップページへ戻る</a>
+          </div>
+
+        </div><!-- /.contact-form-wrap -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================
+       Footer
+  ============================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand__logo">LAKOTA HOUSE</a>
+        <address class="footer-brand__address">
+          〒100-0005<br>
+          東京都千代田区丸の内1-1-1<br>
+          TEL: 03-1234-5678<br>
+          MAIL: info@lakotahouse.example
+        </address>
+      </div>
+      <nav class="footer-nav" aria-label="フッターナビゲーション1">
+        <p class="footer-nav__title">Pages</p>
+        <ul class="footer-nav__list">
+          <li><a href="index.html">Top</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="news.html">News</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav" aria-label="フッターナビゲーション2">
+        <p class="footer-nav__title">Info</p>
+        <ul class="footer-nav__list">
+          <li><a href="access.html">Access</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 LAKOTA HOUSE. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
